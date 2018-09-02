@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+			{% block content %}
+			<div class="container pt-3">
+				<p>Program obliczy podstawowe statystyki dla sekwencji nukleotydowej takie jak:
+				<ul>
+					<li>długość sekwencji</li>
+					<li>% CG</li>
+				</ul></p>
+				<form action="{{url_for('sek_stat')}}">
+					<label for="seq">Wklej sekwencje:</label><br />
+					<textarea name="seq" rows="15" cols="100">ATCG....</textarea>
+					<br />
+					<input type="submit" value="Analizuj">
+				</form>
+			</div>
+			{% endblock %}
