@@ -25,7 +25,19 @@ def sek_stat():
         if n == 'G' or n == 'C':
             l+=1
     cg = round(l/len(seq)*100,2)
-    return render_template('sek_stat.html', name = 'Statystyki', seq_len = seq_len, cg = cg)
+    rev = []
+    for n in seq:
+        if n == 'A':
+            rev.append('T')
+        elif n == 'T':
+            rev.append('A')
+        elif n == 'G':
+            rev.append('C')
+        elif n == 'C':
+            rev.append('G')
+    rev = ''.join(rev[::-1])
+    return render_template('sek_stat.html', name = 'Statystyki', seq_len = seq_len, cg = cg, rev = rev,seq = seq)
+
 
 
 
