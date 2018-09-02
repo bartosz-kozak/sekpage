@@ -12,7 +12,8 @@ def get_sek():
 
 @app.route('/sek_stat')
 def sek_stat():
-    seq = request.args.get('seq').upper()
+    seq = request.args.get('seq').upper()    
+    seq = seq.replace('\n', '').replace('\r', '')
     if '....' in seq:
         return render_template('error.html', name = 'Brak sekwencji')
     nuc_list = ['A', 'C', 'T', 'G']
