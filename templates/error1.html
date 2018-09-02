@@ -2,7 +2,8 @@
 			{% block content %}
 			<div class="container pt-3">
 				<h3>Twoja sekwencja zawiera niedozwolone znaki!</h3>
-				<p>Na obecnym etapie program pozwala na anlize sekwencji DNA kodowanych standardowo ('A','C','T' lub 'G'). Możliwe jest podanie małych znaków ('a','c', 't' lub 'g').
+				<p>Na obecnym etapie program pozwala na anlize sekwencji DNA kodowanych standardowo ('A','C','T' lub 'G'). Możliwe jest podanie małych znaków ('a','c', 't' lub 'g').<br />
+				Możliwe, że Twoja sekwencja zawiera znaki nowej lini '\n'. Upewnij się, że analizowana sekwencja jest jednym ciągiem znaków (bez enterów i innych znaków formatowania).</p>
 				<p><a href="{{url_for('get_sek')}}">Jeszcze raz</a></p>
 			{% endblock %}
 

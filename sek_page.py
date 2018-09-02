@@ -16,7 +16,7 @@ def sek_stat():
     if '....' in seq:
         return render_template('error.html', name = 'Brak sekwencji')
     nuc_list = ['A', 'C', 'T', 'G']
-    if any(x not in nuc_list for x in seq) == True:
+    if any(x not in nuc_list for x in seq):
         return render_template('error1.html', name = 'Niedozwolone znaki')
     seq_len = len(seq)
     l=0
